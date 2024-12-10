@@ -1,0 +1,61 @@
+<div class="custom-content">
+    <h2>Catastro</h2>
+    <form id="catastroForm" >
+        <div class="mb-3 mt-3">
+            <label for="codigo_usuario" class="form-label">Código Usuario:</label>
+            <input type="text" class="form-control" id="codigo_usuario" placeholder="Enter Código Usuario" name="codigo_usuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="categoria_suscripcion" class="form-label">Categoría Suscripción:</label>
+            <select class="form-control" id="categoria_suscripcion" name="categoria_suscripcion" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="Domestica">Doméstica</option>
+                <option value="Comercial">Comercial</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Social">Social</option>
+                <option value="Publico">Público</option>
+                <option value="Especial">Especial</option>
+            </select>
+        </div>
+
+        <!-- Campos ocultos que se llenarán con la API     action="http://localhost:3000/catastro/create" method="POST"  -->
+        <input type="hidden" id="id_ubicacion" name="id_ubicacion">
+        <input type="hidden" id="id_inmueble" name="id_inmueble">
+        <input type="hidden" id="id_medidor" name="id_medidor">
+        <input type="hidden" id="id_puntos_agua" name="id_puntos_agua">
+        <input type="hidden" id="id_usuario" name="id_usuario">
+        <input type="hidden" id="id_cliente" name="id_cliente" required>
+
+
+        <div class="mb-3 d-flex">
+            <div class="flex-grow-1">
+                <label for="clienteSearch" class="form-label">Escriba para buscar cliente (nombre, apellidos o CI)</label>
+                <input type="text" id="clienteSearch" class="form-control" placeholder="Escriba aquí..." required>
+                <div id="clienteDropdown" class="dropdown-menu w-100" style="display: none;"></div>
+            </div>
+            <div class="ms-2 align-self-end">
+                
+                <!--  <button id="mostrarIdCliente" class="btn btn-primary" disabled>Mostrar ID</button>-->
+                <button id="limpiarBusqueda" class="btn btn-secondary ms-2">Limpiar</button>
+
+
+
+                <!-- <button id="alerta" class="btn btn-secondary ms-2">alerta</button> -->
+            </div> 
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card">
+
+
+        
+        <span class="custom-text-success-bg"> Cliente ✔ </span>
+        <span class="custom-text-success-bg"> Ubicacion ✔  </span>
+        <span class="custom-text-success-bg"> Inmueble ✔  </span>
+        <span class="custom-text-success-bg"> Medidor ✔  </span>
+        <span class="custom-text-success-bg"> Puntos de agua ✔  </span>
+
+</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="custom-content">
+<h2>Cliente</h2>
+<form id="clienteForm" action="http://localhost:3000/cliente/create" method="POST">
+    <input type="hidden" id="id" name="id">
+    <div class="mb-3 mt-3">
+        <label for="ci" class="form-label">CI:</label>
+        <input type="text" class="form-control" id="ci" placeholder="Enter CI" name="ci" required >
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Enter Nombre" name="nombre" required>
+    </div>
+    <div class="mb-3">
+        <label for="apellidos" class="form-label">Apellidos:</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Enter Apellidos" name="apellidos" required>
+    </div>
+    <div class="mb-3">
+        <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
+        <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+    </div>
+    <div class="mb-3">
+        <label for="cel" class="form-label">Celular:</label>
+        <input type="tel" class="form-control" id="cel" placeholder="Enter Celular" name="cel" required pattern="[0-9]{7,10}">
+        <small class="form-text text-muted">Formato: 10 dígitos.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+

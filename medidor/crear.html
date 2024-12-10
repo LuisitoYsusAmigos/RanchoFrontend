@@ -1,0 +1,50 @@
+<div class="custom-content">
+    <h2>Medidor</h2>
+    <form id="medidorForm" action="http://localhost:3000/medidor/create" method="POST">
+        <input type="hidden" id="id" name="id">
+        <div class="mb-3 mt-3">
+            <label for="numero_medidor" class="form-label">Número de Medidor:</label>
+            <input type="text" class="form-control" id="numero_medidor" placeholder="Ingrese Número de Medidor" name="numero_medidor" maxlength="20" required>
+        </div>
+        <div class="mb-3">
+            <label for="diametro_tuberia" class="form-label">Diámetro de Tubería:</label>
+            <input type="number" class="form-control" id="diametro_tuberia" placeholder="Ingrese Diámetro de Tubería" name="diametro_tuberia" step="0.0001" required>
+        </div>
+        <div class="mb-3">
+            <label for="marca_medidor" class="form-label">Marca del Medidor:</label>
+            <input type="text" class="form-control" id="marca_medidor" placeholder="Ingrese Marca del Medidor" name="marca_medidor" maxlength="40" required>
+        </div>
+        <div class="mb-3">
+            <label for="lectura_actual_medidor" class="form-label">Lectura Actual:</label>
+            <input type="number" class="form-control" id="lectura_actual_medidor" placeholder="Ingrese Lectura Actual" name="lectura_actual_medidor" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipo_medidor" class="form-label">Tipo de Medidor:</label>
+            <input type="text" class="form-control" id="tipo_medidor" placeholder="Ingrese Tipo de Medidor" name="tipo_medidor" maxlength="20" required>
+        </div>
+        <div class="mb-3">
+            <label for="localizacion_caja" class="form-label">Localización de la Caja:</label>
+            <select class="form-control" id="localizacion_caja" name="localizacion_caja" required>
+                <option value="">Selecciona Localización de la Caja</option>
+                <option value="Acera">Acera</option>
+                <option value="Al interior del inmueble">Al interior del inmueble</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="estado_medidor" class="form-label">Estado del Medidor:</label>
+            <select class="form-control" id="estado_medidor" name="estado_medidor" required>
+                <option value="">Selecciona Estado del Medidor</option>
+                <option value="Bueno">Bueno</option>
+                <option value="Regular">Regular</option>
+                <option value="Mal estado">Mal estado</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card" id="banner">
+        
+        <span class="custom-text-success-bg"> Ubicacion ✔ </span>
+        <span class="custom-text-success-bg"> Inmueble ✔ </span>
+    </div>
+</div>

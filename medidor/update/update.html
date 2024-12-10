@@ -1,0 +1,51 @@
+<div class="custom-content">
+    <h2>Medidor</h2>
+    <form id="medidorForm" action="http://localhost:3000/medidor/update/1" method="POST">
+        <input type="hidden" id="id" name="id">
+        <div class="mb-3 mt-3">
+            <label for="numero_medidor" class="form-label">Número de Medidor:</label>
+            <input type="text" class="form-control" id="numero_medidor" placeholder="Ingrese Número de Medidor"
+                name="numero_medidor" maxlength="20" required>
+        </div>
+        <div class="mb-3">
+            <label for="diametro_tuberia" class="form-label">Diámetro de Tubería:</label>
+            <input type="number" class="form-control" id="diametro_tuberia" placeholder="Ingrese Diámetro de Tubería"
+                name="diametro_tuberia" step="0.0001" required>
+        </div>
+        <div class="mb-3">
+            <label for="marca_medidor" class="form-label">Marca del Medidor:</label>
+            <input type="text" class="form-control" id="marca_medidor" placeholder="Ingrese Marca del Medidor"
+                name="marca_medidor" maxlength="40" required>
+        </div>
+        <div class="mb-3">
+            <label for="lectura_actual_medidor" class="form-label">Lectura Actual:</label>
+            <input type="number" class="form-control" id="lectura_actual_medidor" placeholder="Ingrese Lectura Actual"
+                name="lectura_actual_medidor" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipo_medidor" class="form-label">Tipo de Medidor:</label>
+            <input type="text" class="form-control" id="tipo_medidor" placeholder="Ingrese Tipo de Medidor"
+                name="tipo_medidor" maxlength="20" required>
+        </div>
+        <div class="mb-3">
+            <label for="localizacion_caja" class="form-label">Localización de la Caja:</label>
+            <input type="text" class="form-control" id="localizacion_caja" placeholder="Ingrese Localización de la Caja"
+                name="localizacion_caja" maxlength="21" required>
+        </div>
+        <div class="mb-3">
+            <label for="estado_medidor" class="form-label">Estado del Medidor:</label>
+            <div>
+                <input type="checkbox" id="estado_medidor" name="estado_medidor" value="1">
+                <input type="hidden" name="estado_medidor" value="0"> <!-- Campo oculto para enviar 0 -->
+                <label for="estado_medidor">Operativo</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card" id="banner">
+        <span class="custom-text-success-bg"> Cliente ✔ </span>
+        <span class="custom-text-success-bg"> Ubicacion ✔ </span>
+        <span class="custom-text-success-bg"> Inmueble ✔ </span>
+    </div>
+</div>

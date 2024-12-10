@@ -1,0 +1,51 @@
+<div class="custom-content">
+    <h2>Servicios y Habitaciones</h2>
+    <form id="inmuebleForm" action="http://localhost:3000/inmueble/create"    method="POST">
+        <div class="mb-3 mt-3">
+            <label for="n_familia" class="form-label">Número de Familia:</label>
+            <input type="number" class="form-control" id="n_familia" placeholder="Enter Número de Familia" name="n_familia" required>
+        </div>
+        <div class="mb-3">
+            <label for="n_persona" class="form-label">Número de Persona:</label>
+            <input type="number" class="form-control" id="n_persona" placeholder="Enter Número de Persona" name="n_persona" required>
+        </div>
+        <div class="mb-3">
+            <label for="n_habitaciones" class="form-label">Número de Habitaciones:</label>
+            <input type="number" class="form-control" id="n_habitaciones" placeholder="Enter Número de Habitaciones" name="n_habitaciones" required>
+        </div>
+        <div class="mb-3">
+            <label for="servicio_de_agua" class="form-label">Servicio de Agua:</label>
+            <div>
+                <input type="checkbox" id="servicio_de_agua" name="servicio_de_agua" value="1">
+                <input type="hidden" name="servicio_de_agua" value="0"> <!-- Campo oculto para enviar 0 -->
+                <label for="servicio_de_agua"> Disponible</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="servicio_alcantarillado" class="form-label">Servicio de Alcantarillado:</label>
+            <div>
+                <input type="checkbox" id="servicio_alcantarillado" name="servicio_alcantarillado" value="1">
+                <input type="hidden" name="servicio_alcantarillado" value="0"> <!-- Campo oculto para enviar 0 -->
+                <label for="servicio_alcantarillado"> Disponible</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="servicio_recojo_basura" class="form-label">Servicio de Recojo de Basura:</label>
+            <div>
+                <input type="checkbox" id="servicio_recojo_basura" name="servicio_recojo_basura" value="1">
+                <input type="hidden" name="servicio_recojo_basura" value="0"> <!-- Campo oculto para enviar 0 -->
+                <label for="servicio_recojo_basura"> Disponible</label>
+            </div>
+        </div>
+        <div style="display: none;">
+            <input type="checkbox" id="servicio_limpieza" name="servicio_limpieza" value="1">
+            <input type="hidden" name="servicio_limpieza" value="0"> <!-- Campo oculto para enviar 0 -->
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card">
+       
+        <span class="custom-text-success-bg"> Ubicacion ✔ </span>
+    </div>
+</div>

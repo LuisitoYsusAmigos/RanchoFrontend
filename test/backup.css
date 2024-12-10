@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #6366f1;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    color: #3e4455;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-container {
+    display: flex;
+}
+
+/* Sidebar layout & functionality */
+
+#custom-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #293b5f;
+    height: 100vh;
+}
+
+#custom-toggler {
+    display: none;
+}
+
+.custom-toggle-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #FFF;
+    padding: 1rem 1.5rem;
+    width: max-content;
+}
+
+.custom-sidebar-nav {
+    width: 85px;
+    min-width: 85px;
+    padding: 25px 0;
+    flex: 1 1 auto;
+    transition: all .25s ease-in-out;
+}
+
+#custom-sidebar input[type="checkbox"]:checked~.custom-sidebar-nav {
+    width: 260px;
+    min-width: 260px;
+}
+
+a.custom-sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.custom-sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.custom-sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+#custom-sidebar input[type="checkbox"]:not(:checked)~* .custom-sidebar-link span {
+    display: none;
+}
+
+.custom-sidebar-footer {
+    padding: 1.25rem;
+    background-color: #1e2c47;
+}
+
+/* Main content layout */
+
+.custom-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.custom-dashboard-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.custom-nav-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-search-query {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.custom-btn {
+    padding: 0.5rem 1rem;
+    background-color: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.custom-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.custom-user-link {
+    position: relative;
+}
+
+.custom-user-link-dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    display: none;
+}
+
+.custom-user-link:hover .custom-user-link-dropdown {
+    display: block;
+}
+
+.custom-dropdown-item {
+    padding: 0.75rem;
+    display: block;
+    color: #212529;
+    white-space: nowrap;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Dashboard content */
+
+.custom-content {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    flex: 1 1 auto;
+}
+
+.custom-dashboard-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.custom-card {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.custom-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.custom-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.custom-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-text-success-bg {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.custom-badge-text {
+    color: #868e96;
+}
+
+/* Table layout */
+
+#custom-posts {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+#custom-posts th,
+#custom-posts td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#custom-posts th {
+    background-color: #f1f3f5;
+}
+
+/* Footer layout */
+
+footer {
+    padding: 1.5rem;
+    background-color: #293b5f;
+    color: white;
+}
+
+.custom-footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-social-icons a {
+    color: #FFF;
+}
+
+.custom-social-icons a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Eliminar subrayado de los enlaces en el sidebar */
+.custom-sidebar-link {
+    text-decoration: none; /* Quitar subrayado */
+    color: #000; /* Cambiar color si es necesario */
+}
+
+.custom-sidebar-link:hover {
+    color: #007bff; /* Cambiar color en hover, puedes modificarlo */
+    text-decoration: underline; /* Opcional: agregar subrayado en hover */
+}
+
+/* Estilo adicional para los elementos del sidebar */
+.custom-sidebar-item {
+    margin-bottom: 10px; /* Espaciado entre los items */
+}
+
+/* Ajuste para el footer del sidebar */
+.custom-sidebar-footer {
+    margin-top: auto; /* Mantener el footer al final */
+}

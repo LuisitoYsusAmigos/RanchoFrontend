@@ -1,0 +1,62 @@
+<div class="custom-content">
+    <form id="puntosAguaForm" action="http://localhost:3000/puntosAgua/create" method="POST">
+        <h2>Puntos de Agua</h2>
+        <br>
+        <input type="hidden" id="id" name="id">
+        <div class="checkbox-group" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div class="form-check">
+                <input type="hidden" name="pileta_patio" value="0">
+                <input type="checkbox" id="pileta_patio" name="pileta_patio" value="1">
+                <label for="pileta_patio">Pileta en el Patio</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="lavanderia" value="0">
+                <input type="checkbox" id="lavanderia" name="lavanderia" value="1">
+                <label for="lavanderia">Lavandería</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="lava_platos" value="0">
+                <input type="checkbox" id="lava_platos" name="lava_platos" value="1">
+                <label for="lava_platos">Lava Platos</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="inodoro" value="0">
+                <input type="checkbox" id="inodoro" name="inodoro" value="1">
+                <label for="inodoro">Inodoro</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="ducha" value="0">
+                <input type="checkbox" id="ducha" name="ducha" value="1">
+                <label for="ducha">Ducha</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="lava_manos" value="0">
+                <input type="checkbox" id="lava_manos" name="lava_manos" value="1">
+                <label for="lava_manos">Lava Manos</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="tina" value="0">
+                <input type="checkbox" id="tina" name="tina" value="1">
+                <label for="tina">Tina</label>
+            </div>
+            <div class="form-check">
+                <input type="hidden" name="otros" value="0">
+                <input type="checkbox" id="otros" name="otros" value="1">
+                <label for="otros">Otros</label>
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="observaciones" class="form-label">Observaciones:</label>
+            <textarea class="form-control" id="observaciones" name="observaciones" placeholder="Ingrese observaciones" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card" id="banner">
+        
+        <span class="custom-text-success-bg"> Ubicacion ✔  </span>
+        <span class="custom-text-success-bg"> Inmueble ✔  </span>
+        <span class="custom-text-success-bg"> Medidor ✔  </span>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="custom-content">
+    <h2>Ubicación</h2>
+    <form id="ubicacionForm" action="http://localhost:3000/ubicacion/create" method="POST">
+        <input type="hidden" id="id" name="id">
+        <div class="mb-3 mt-3">
+            <label for="localidad" class="form-label">Localidad:</label>
+            <input type="text" class="form-control" id="localidad" placeholder="Enter Localidad" name="localidad" required>
+        </div>
+        <div class="mb-3">
+            <label for="municipio" class="form-label">Municipio:</label>
+            <input type="text" class="form-control" id="municipio" placeholder="Enter Municipio" name="municipio" required>
+        </div>
+        <div class="mb-3">
+            <label for="provincia" class="form-label">Provincia:</label>
+            <input type="text" class="form-control" id="provincia" placeholder="Enter Provincia" name="provincia" required>
+        </div>
+        <div class="mb-3">
+            <label for="zona" class="form-label">Zona:</label>
+            <input type="text" class="form-control" id="zona" placeholder="Enter Zona" name="zona" required>
+        </div>
+        <div class="mb-3">
+            <label for="calle" class="form-label">Calle:</label>
+            <input type="text" class="form-control" id="calle" placeholder="Enter Calle" name="calle" required>
+        </div>
+        <div class="mb-3">
+            <label for="material_via" class="form-label">Material de la Vía:</label>
+            <select class="form-control" id="material_via" name="material_via" required>
+                <option value="">Selecciona Material de la Vía</option>
+                <option value="Pavimento">Pavimento</option>
+                <option value="Empedrado">Empedrado</option>
+                <option value="Ripio">Ripio</option>
+                <option value="Tierra">Tierra</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="material_acera" class="form-label">Material de la Acera:</label>
+            <select class="form-control" id="material_acera" name="material_acera" required>
+                <option value="">Selecciona Material de la Acera</option>
+                <option value="Cemento">Cemento</option>
+                <option value="Empedrado">Empedrado</option>
+                <option value="Tierra">Tierra</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <br>
+    <div class="custom-dashboard-card" id="banner"></div>
+</div>

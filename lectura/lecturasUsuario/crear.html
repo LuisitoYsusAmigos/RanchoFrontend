@@ -1,0 +1,41 @@
+<div class="custom-content">
+    <h2>Lecturas</h2>
+    <form id="lecturaForm" action="http://localhost:3000/lectura/create" method="POST">
+        <input type="hidden" id="id" name="id">
+        
+        <div class="mb-3 mt-3">
+            <label for="fecha" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+        </div>
+        
+
+        
+        <div class="mb-3">
+            <label for="lectura_actual" class="form-label">Lectura Actual:</label>
+            <input type="number" class="form-control" id="lectura_actual" placeholder="Enter Lectura Actual" name="lectura_actual" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="lectura_anterior" class="form-label">Lectura Anterior:</label>
+            <input type="number" class="form-control" id="lectura_anterior" placeholder="Enter Lectura Anterior" name="lectura_anterior" readonly>
+        </div>
+        
+        <div class="mb-3">
+            <label for="consumoM3" class="form-label">Consumo (M3):</label>
+            <input type="number" class="form-control" id="consumo_m3" placeholder="Enter Consumo M3" name="consumo_m3" readonly>
+        </div>
+        
+        <div class="mb-3">
+            <label for="consumoBs" class="form-label">Consumo (Bs):</label>
+            <input type="number" class="form-control" id="consumo_bs" placeholder="Enter Consumo Bs" name="consumo_bs" readonly>
+        </div>
+        
+        <!-- Campos ocultos -->
+        <input type="hidden" id="id_tarifa" name="id_tarifa">
+        <input type="hidden" id="id_catastro" name="id_catastro">
+        <input type="hidden" id="id_usuario" name="id_usuario">
+        <input type="hidden" id="pagado" name="pagado" value="0">
+        
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<div class="custom-content">
+    <h2>Tipo Multa</h2>
+    <form id="tipoMultaForm" action="http://localhost:3000/cliente/create" method="POST">
+        <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="inasistencia" class="form-label">Inasistencia:</label>
+            <input type="number" class="form-control" id="inasistencia" name="inasistencia" placeholder="Enter Inasistencia" required min="0">
+            <small class="form-text text-muted">Cantidad de meses sin pagar para considerarse pagador poco frecuente.</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="alto_consumo" class="form-label">Alto Consumo:</label>
+            <input type="number" class="form-control" id="alto_consumo" name="alto_consumo" placeholder="Enter Alto Consumo" required min="0">
+            <small class="form-text text-muted">Cantidad de agua en m³ necesario para ser considerado como alto consumo.</small>
+        </div>
+
+
+
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

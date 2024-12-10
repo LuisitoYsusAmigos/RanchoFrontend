@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<aside id="custom-sidebar">
+    <input type="checkbox" name="" id="custom-toggler">
+    <label for="custom-toggler" class="custom-toggle-btn">
+        <i class="lni lni-grid-alt"></i>
+    </label>
+    <ul class="custom-sidebar-nav">
+        <li class="custom-sidebar-item">
+            <a id="link-perfil" href="/cliente/index.html" class="custom-sidebar-link">
+                <i class="lni lni-user"></i>
+                <span>Clientes</span>
+            </a>
+        </li>
+        <li class="custom-sidebar-item">
+            <a href="/catastro/index.html" class="custom-sidebar-link">
+                <i class="lni lni-agenda"></i>
+                <span>Catastro</span>
+            </a>
+        </li>
+        <li class="custom-sidebar-item">
+            <a href="/tarifa/index.html" class="custom-sidebar-link">
+                <i class="lni lni-protection"></i>
+                <span>tarifa</span>
+            </a>
+        </li>
+        <li class="custom-sidebar-item">
+            <a href="/lectura/index.html" class="custom-sidebar-link">
+                <i class="lni lni-layout"></i>
+                <span>Lectura</span>
+            </a>
+        </li>
+        <li class="custom-sidebar-item">
+            <a href="/recibo/index.html" class="custom-sidebar-link">
+                <i class="lni lni-popup"></i>
+                <span>Recibo</span>
+            </a>
+        </li>
+
+       
+        <li class="custom-sidebar-item">
+            <a href="/multa/index.html" class="custom-sidebar-link">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Multa</span>
+            </a>
+        </li>
+
+        <li class="custom-sidebar-item">
+            <a href="/tipoMulta/index.html" class="custom-sidebar-link">
+                <i class="fa-solid fa-marker"></i>
+                <span>Tipos Multa</span>
+            </a>
+        </li>
+
+
+
+
+        <li class="custom-sidebar-item">
+            <a href="/egreso/index.html" class="custom-sidebar-link">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Egreso</span>
+            </a>
+        </li>
+         
+    </ul>
+
+    <div class="custom-sidebar-footer">
+        <a href="#" class="custom-sidebar-link" id="logout">
+            
+            
+            <i class="lni lni-exit"></i>
+            <span >Cerrar sesion</span>
+            
+            
+        </a>
+    </div>
+</aside>
+
+<script>
+    
+
+    document.getElementById("logout").addEventListener("click", () => {
+        if (localStorage.getItem("user")) {
+        localStorage.removeItem("user");
+        window.location.href = '/';
+    } else {
+        console.log("No existe sesión");
+    }    
+    });
+    const datos=JSON.parse(localStorage.getItem("user"))
+    const nombres= datos.datosUsuario[0]
+    //console.log(nombres)
+    document.getElementById("nombreUsuario").innerHTML=nombres
+    //console.log("dios esta en el slide")
+</script>
+
