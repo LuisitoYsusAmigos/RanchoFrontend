@@ -39,7 +39,7 @@
     let clienteSeleccionadoId = null; // Almacenará el ID del cliente seleccionado
 
     // Cargar los clientes desde la API
-    fetch("http://localhost:3000/cliente/index")
+    fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/cliente/index")
         .then(response => response.json())
         .then(data => {
             if (data.status) {

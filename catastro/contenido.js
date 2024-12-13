@@ -49,7 +49,7 @@ window.onload = async function () {
                     console.log(data);  // Asegura que id_cliente ahora tiene el valor seleccionado
 
                     try {
-                        const response = await fetch("http://localhost:3000/catastro/create", {
+                        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/catastro/create", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"
@@ -91,7 +91,7 @@ window.onload = async function () {
         if (clienteSearchInput && clienteDropdown && limpiarBusquedaBtn) {
             let clientes = [];
 
-            fetch("http://localhost:3000/cliente/index")
+            fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/cliente/index")
                 .then(response => response.json())
                 .then(data => {
                     if (data.status) clientes = data.value;

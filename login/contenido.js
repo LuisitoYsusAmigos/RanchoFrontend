@@ -59,7 +59,7 @@ export default  function verificarToken() {
         return; // Termina la función si no existe el usuario o el token
     }else{
         const token = user.token
-        fetch("http://localhost:3000/auth/", {
+        fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/auth/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -70,7 +70,7 @@ export default  function verificarToken() {
         .then(data => {
             if (data.success) {
                 //alert("Token válido.");
-                window.location.href = '../index.html';
+                window.location.href = '../cliente/index.html';
             }
         })
         .catch(error => {

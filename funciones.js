@@ -43,7 +43,7 @@ export function mensajeError(mensaje, id) {
 }
 
 export function matrizRegistro() {
-    return fetch('http://localhost:3000/catastro/getMatrizRegistro', {
+    return fetch('https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/catastro/getMatrizRegistro', {
         method: 'GET',
     })
         .then(response => {
@@ -62,7 +62,7 @@ export function matrizRegistro() {
 }
 
 export function obtenerIdsRegistroCatastro() {
-    return fetch(`http://localhost:3000/catastro/getallIdRegistro`, {
+    return fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/catastro/getallIdRegistro`, {
         method: 'GET',
     })
         .then(response => {
@@ -81,7 +81,7 @@ export function obtenerIdsRegistroCatastro() {
 }
 
 export function obtenerdatosRegistroLectura(id_catastro) {
-    return fetch(`http://localhost:3000/lectura/datosRegistroLectura/${id_catastro}`, {
+    return fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/lectura/datosRegistroLectura/${id_catastro}`, {
         method: 'GET',
     })
         .then(response => {
@@ -107,7 +107,7 @@ export async function verificarToken() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/auth/", {
+        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/auth/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -152,7 +152,7 @@ export function init() {
         return;
     }
 
-    return fetch("http://localhost:3000/auth/", {
+    return fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/auth/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

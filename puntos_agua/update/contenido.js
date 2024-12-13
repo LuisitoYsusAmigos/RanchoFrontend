@@ -17,7 +17,7 @@ window.onload = async function () {
         const catastroId = getQueryParameter('id');
         console.log(`ID del catastro: ${catastroId}`);
 
-        const response = await fetch(`http://localhost:3000/puntosAgua/edit/${catastroId}`, {
+        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/puntosAgua/edit/${catastroId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ window.onload = async function () {
         const form = document.getElementById('puntosAguaForm');
         let data = await response.json();
         if (data.status === true) {
-            document.getElementById('puntosAguaForm').action = `http://localhost:3000/puntosAgua/update/${catastroId}`;
+            document.getElementById('puntosAguaForm').action = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/puntosAgua/update/${catastroId}`;
             data = data.value[0];
             console.log(data);
             document.getElementById('id').value = catastroId;

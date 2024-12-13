@@ -93,7 +93,7 @@ window.onload = async function () {
             };
             console.log(JSON.stringify(data))
             try {
-                const response = await fetch("http://localhost:3000/tarifa/create", {
+                const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/tarifa/create", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

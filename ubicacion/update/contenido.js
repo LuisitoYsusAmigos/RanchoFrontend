@@ -18,7 +18,7 @@ window.onload = async function () {
         console.log(`ID del catastro: ${catastroId}`);
 
         // Llamada PUT a la API
-        const response = await fetch(`http://localhost:3000/ubicacion/edit/${catastroId}`, {
+        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/ubicacion/edit/${catastroId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ window.onload = async function () {
         console.log(data.value[0])
         if(data.status==true){
             //alert(data.ci)
-            document.getElementById('ubicacionForm').action = `http://localhost:3000/ubicacion/update/${catastroId}`;
+            document.getElementById('ubicacionForm').action = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/ubicacion/update/${catastroId}`;
             data = data.value[0]
             console.log(data);
             document.getElementById('id').value = catastroId

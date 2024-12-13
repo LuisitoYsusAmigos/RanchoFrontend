@@ -37,7 +37,7 @@ window.onload = async function () {
 
         const loadData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/lectura/lecturasCatastroNoPagado/${id_catastro}`);
+                const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/lectura/lecturasCatastroNoPagado/${id_catastro}`);
                 const data = await response.json();
                 if (data.status && data.value) {
                     const lecturasPagar = data.value.filter(item => !item.pagado);
@@ -148,7 +148,7 @@ window.onload = async function () {
 
             const userData = JSON.parse(localStorage.getItem("user"));
             const fecha = obtenerFechaActual();
-            const maxReciboId = await (await fetch("http://localhost:3000/recibo/obtenerReciboIdMax")).json();
+            const maxReciboId = await (await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/recibo/obtenerReciboIdMax")).json();
             const id_recibo = maxReciboId.value[0].id_recibo;
 
             const reciboData = {
@@ -157,7 +157,7 @@ window.onload = async function () {
                 id_usuario: userData.datosUsuario[0].id,
             };
 
-            fetch("http://localhost:3000/recibo/create", {
+            fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/recibo/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -179,7 +179,7 @@ window.onload = async function () {
                             id_lectura: id,
                             id_recibo: id_recibo
                         };
-                        fetch("http://localhost:3000/lecturaRecibo/create", {
+                        fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/lecturaRecibo/create", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json"
