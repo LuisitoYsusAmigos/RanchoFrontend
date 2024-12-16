@@ -5,7 +5,7 @@ const tarifaTablaContainer = document.querySelector('.container'); // Donde irá
 // Función para obtener los datos desde la API
 async function obtenerDatos() {
     try {
-        const response = await fetch('https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/tarifa/index');
+        const response = await fetch('https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/tarifa/index');
         const data = await response.json();
 
         if (data.status && data.value.length > 0) {

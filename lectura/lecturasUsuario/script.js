@@ -44,7 +44,7 @@ const listUsers = async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const catastroId = urlParams.get('id_catastro');
 
-        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/lectura/lecturasCatastro/${catastroId}`);
+        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/lectura/lecturasCatastro/${catastroId}`);
         console.log("respues de api")
         const data = await response.json();
         console.log(data.status)

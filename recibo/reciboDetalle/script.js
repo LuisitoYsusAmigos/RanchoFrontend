@@ -50,7 +50,7 @@ const listUsers = async () => {
         const idRecibo = urlParams.get('id');
         console.log("ID del recibo:", idRecibo);
 
-        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/recibo/detalleRecibo/${idRecibo}`);
+        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/recibo/detalleRecibo/${idRecibo}`);
         console.log("Respuesta de la API:", response);
 
         if (!response.ok) {

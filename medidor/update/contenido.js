@@ -19,7 +19,7 @@ window.onload = async function () {
         console.log(`ID del catastro: ${catastroId}`);
 
         // Llamada PUT a la API
-        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/medidor/edit/${catastroId}`, {
+        const response = await fetch(`https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/medidor/edit/${catastroId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ window.onload = async function () {
         console.log(data.value[0])
         if (data.status == true) {
             //alert(data.ci)
-            document.getElementById('medidorForm').action = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/medidor/update/${catastroId}`;
+            document.getElementById('medidorForm').action = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/medidor/update/${catastroId}`;
             data = data.value[0]
            // console.log(data);
             document.getElementById('id').value = catastroId

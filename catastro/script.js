@@ -40,7 +40,7 @@ const initDataTable = async () => {
 
 const listUsers = async () => {
     try {
-        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/catastro/getResumenCatastro");
+        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/catastro/getResumenCatastro");
         const data = await response.json();
         const catastros = data.value;
 

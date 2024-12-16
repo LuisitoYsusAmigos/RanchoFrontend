@@ -40,7 +40,7 @@ const initDataTable = async () => {
 
 const listUsers = async () => {
     try {
-        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/lectura/UsuariosLecturas");
+        const response = await fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/lectura/UsuariosLecturas");
         const data = await response.json();
         const usuariosLecturas = data.value;
         console.log(usuariosLecturas)

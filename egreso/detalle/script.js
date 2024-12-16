@@ -100,7 +100,7 @@ const initDataTable = async () => {
 // Función para listar los usuarios (datos del servidor)
 const listUsers = async () => {
     try {
-        const query = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/egreso/getMonth/${fecha}`;
+        const query = `https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/egreso/getMonth/${fecha}`;
         const response = await fetch(query);
         const data = await response.json();
 

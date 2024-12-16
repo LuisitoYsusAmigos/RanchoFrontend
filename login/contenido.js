@@ -59,7 +59,7 @@ export default  function verificarToken() {
         return; // Termina la función si no existe el usuario o el token
     }else{
         const token = user.token
-        fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/auth/", {
+        fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/auth/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

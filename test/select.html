@@ -22,7 +22,7 @@
     <script>
         $(document).ready(function() {
     // Cargar los clientes desde la API
-    fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/cliente/index")
+    fetch("https://ranchoback.api.dev.dtt.tja.ucb.edu.bo/cliente/index")
         .then(response => response.json())
         .then(data => {
             if (data.status) {
